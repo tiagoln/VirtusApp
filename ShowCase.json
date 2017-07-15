@@ -1,22 +1,24 @@
-[
-  {
-    "Title": "VIRTUS",
-    "Description": "O VIRTUS – Núcleo de Pesquisa, Desenvolvimento e Inovação em Tecnologia da Informação, Comunicação e Automação – é um órgão suplementar da Universidade Federal de Campina Grande (UFCG) vinculado ao Centro de Engenharia Elétrica e Informática (CEEI). Com a visão de se tornar referência internacional em desenvolvimento e inovação tecnológica, o VIRTUS foi fundado por pesquisadores do CEEI com mais de 15 anos de experiência em projetos de pesquisa e desenvolvimento, com foco no estabelecimento de parcerias e cooperação técnico-científica com a indústria e na geração e agregação de valor e diferencial competitivo tanto para a UFCG como para as empresas.",
-    "ImageURL": "https://lh3.ggpht.com/-F-4jHFtoLng/V6nZVn25gdI/AAAAAAAAAbg/3YNT6qvOEMcomXPkjVi6zEy1pd7GgiV1wCJkC/s1536/photo"
-  },
-  {
-    "Title": "Infraestrutura",
-    "Description": "A sede do VIRTUS está localizada dentro do Centro de Inovação e Tecnologia Telmo Araújo (CITTA), um ambiente focado em ações de inovação e na interação com empresas condizente com a demanda por qualidade e profissionalismo dos seus clientes. A infraestrutura do VIRTUS conta com mais de 1000 metros quadrados de laboratórios com equipamentos de última geração, segurança da informação e diversas salas de vídeo conferência para garantir comunicação constante e irrestrita com clientes globais",
-    "ImageURL": "https://lh3.ggpht.com/-agsmoxzTW-M/WCDmSHtibEI/AAAAAAAADJo/Bnut-XTqOU46TK4rRmWCvOFX09SX693MQCLIB/s1536/photo"
-  },
-  {
-    "Title": "Projetos e Parceiros",
-    "Description": "Dentre as empresas parceiras que fazem parte do portfólio de projetos e produtos desenvolvidos pela equipe do VIRTUS, destacam-se SONY, LG, HUAWEI, ASUS, COMPAL, ENVISION, SAMSUNG, NOKIA, HP, JFL, DL, dentre várias outras. Além das credencias acadêmicas, científicas e técnicas, um dos diferenciais mais relevantes para o VIRTUS é a continuada busca pela excelência operacional na execução de projetos, compatível com o nível esperado pelas grandes empresas, o que é respaldado pela parceira com outras instituições de pesquisa e desenvolvimento, tais como o Venturus Centro de Inovação Tecnológica e o Instituto Nokia de Tecnologia.",
-    "ImageURL": "https://lh3.ggpht.com/-fpQV_O36aSY/WMFj1u2f-1I/AAAAAAAAFYM/EGcuBo73DCQ1BNoBSJAjqFDSarhaHVpTgCLIB/s1536/photo"
-  },
-  {
-    "Title": "Unidade EMBRAPII CEEI-UFCG",
-    "Description": "O CEEI é credenciado na Empresa Brasileira de Pesquisa e Inovação Industrial (EMBRAPII – embrapii.org.br) para a execução de projetos de pesquisa e desenvolvimento nas áreas de Software e Automação em cooperação com empresas do setor industrial. Como parte do CEEI, os projetos desenvolvidos no VIRTUS podem receber recursos da EMBRAPII, o que representa mais um diferencial para clientes em busca de competência técnica e inovação de produtos e processos através do uso de recursos financeiros não reembolsáveis. Atualmente o VIRTUS está executando diversos projetos que reúnem recursos de Lei de Informática e recursos EMBRAPII, desta forma aumentando o valor agregado aos seus parceiros em atividades de pesquisa e desenvolvimento.",
-    "ImageURL": "https://lh3.ggpht.com/-hR53KJp0LcQ/WMFj1llJmJI/AAAAAAAAGIs/m3Axkxt9LrUQWRMaBn4HZtfRkTJvfWpoACLIB/s1536/photo"
-  }
-]
+{
+  ShowCases: [
+    {
+      "Title": "VIRTUS",
+      "Description": "O VIRTUS – Núcleo de Pesquisa, Desenvolvimento e Inovação em Tecnologia da Informação, Comunicação e Automação – é um órgão suplementar da Universidade Federal de Campina Grande (UFCG) vinculado ao Centro de Engenharia Elétrica e Informática (CEEI). Com a visão de se tornar referência internacional em desenvolvimento e inovação tecnológica, o VIRTUS foi fundado por pesquisadores do CEEI com mais de 15 anos de experiência em projetos de pesquisa e desenvolvimento, com foco no estabelecimento de parcerias e cooperação técnico-científica com a indústria e na geração e agregação de valor e diferencial competitivo tanto para a UFCG como para as empresas.",
+      "ImageURL": "https://lh3.ggpht.com/-F-4jHFtoLng/V6nZVn25gdI/AAAAAAAAAbg/3YNT6qvOEMcomXPkjVi6zEy1pd7GgiV1wCJkC/s1536/photo"
+    },
+    {
+      "Title": "Infraestrutura",
+      "Description": "A sede do VIRTUS está localizada dentro do Centro de Inovação e Tecnologia Telmo Araújo (CITTA), um ambiente focado em ações de inovação e na interação com empresas condizente com a demanda por qualidade e profissionalismo dos seus clientes. A infraestrutura do VIRTUS conta com mais de 1000 metros quadrados de laboratórios com equipamentos de última geração, segurança da informação e diversas salas de vídeo conferência para garantir comunicação constante e irrestrita com clientes globais",
+      "ImageURL": "https://lh3.ggpht.com/-agsmoxzTW-M/WCDmSHtibEI/AAAAAAAADJo/Bnut-XTqOU46TK4rRmWCvOFX09SX693MQCLIB/s1536/photo"
+    },
+    {
+      "Title": "Projetos e Parceiros",
+      "Description": "Dentre as empresas parceiras que fazem parte do portfólio de projetos e produtos desenvolvidos pela equipe do VIRTUS, destacam-se SONY, LG, HUAWEI, ASUS, COMPAL, ENVISION, SAMSUNG, NOKIA, HP, JFL, DL, dentre várias outras. Além das credencias acadêmicas, científicas e técnicas, um dos diferenciais mais relevantes para o VIRTUS é a continuada busca pela excelência operacional na execução de projetos, compatível com o nível esperado pelas grandes empresas, o que é respaldado pela parceira com outras instituições de pesquisa e desenvolvimento, tais como o Venturus Centro de Inovação Tecnológica e o Instituto Nokia de Tecnologia.",
+      "ImageURL": "https://lh3.ggpht.com/-fpQV_O36aSY/WMFj1u2f-1I/AAAAAAAAFYM/EGcuBo73DCQ1BNoBSJAjqFDSarhaHVpTgCLIB/s1536/photo"
+    },
+    {
+      "Title": "Unidade EMBRAPII CEEI-UFCG",
+      "Description": "O CEEI é credenciado na Empresa Brasileira de Pesquisa e Inovação Industrial (EMBRAPII – embrapii.org.br) para a execução de projetos de pesquisa e desenvolvimento nas áreas de Software e Automação em cooperação com empresas do setor industrial. Como parte do CEEI, os projetos desenvolvidos no VIRTUS podem receber recursos da EMBRAPII, o que representa mais um diferencial para clientes em busca de competência técnica e inovação de produtos e processos através do uso de recursos financeiros não reembolsáveis. Atualmente o VIRTUS está executando diversos projetos que reúnem recursos de Lei de Informática e recursos EMBRAPII, desta forma aumentando o valor agregado aos seus parceiros em atividades de pesquisa e desenvolvimento.",
+      "ImageURL": "https://lh3.ggpht.com/-hR53KJp0LcQ/WMFj1llJmJI/AAAAAAAAGIs/m3Axkxt9LrUQWRMaBn4HZtfRkTJvfWpoACLIB/s1536/photo"
+    }
+  ]
+}
