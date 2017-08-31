@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093A0E1F27D27B00348D33 /* StackViewController.swift */; };
+		A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E11F19815A00E567FC /* LocationViewController.swift */; };
+		A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E31F198C7E00E567FC /* ShowCaseItem.swift */; };
+		A48002E81F19936600E567FC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E71F19936600E567FC /* AppManager.swift */; };
+		A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E71481F16E38700B31E81 /* HomeViewController.swift */; };
+		A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */; };
+		A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */; };
+		A4C7AB521F16D75B00499FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C7AB501F16D75B00499FEB /* Main.storyboard */; };
+		A4C7AB541F16D75B00499FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4C7AB531F16D75B00499FEB /* Assets.xcassets */; };
+		A4C7AB571F16D75B00499FEB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C7AB551F16D75B00499FEB /* LaunchScreen.storyboard */; };
+		B520E7BD579ED18A580085DD /* Pods_VirtusApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		03A84841A4CDAA8A369C2CA7 /* Pods-VirtusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp.debug.xcconfig"; sourceTree = "<group>"; };
+		0A79B6A8B11E070A7C6DA81C /* Pods-VirtusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp.release.xcconfig"; sourceTree = "<group>"; };
+		7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4093A0E1F27D27B00348D33 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		A48002E11F19815A00E567FC /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		A48002E31F198C7E00E567FC /* ShowCaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseItem.swift; sourceTree = "<group>"; };
+		A48002E71F19936600E567FC /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		A48E71481F16E38700B31E81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		A4C7AB471F16D75A00499FEB /* VirtusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4C7AB511F16D75B00499FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A4C7AB531F16D75B00499FEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4C7AB561F16D75B00499FEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4C7AB581F16D75B00499FEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4C7AB441F16D75A00499FEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B520E7BD579ED18A580085DD /* Pods_VirtusApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81665F4A35CBE7D78289234A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03A84841A4CDAA8A369C2CA7 /* Pods-VirtusApp.debug.xcconfig */,
+				0A79B6A8B11E070A7C6DA81C /* Pods-VirtusApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9FEA89233D445AECB8DBAD69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A48002E51F198CF600E567FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A48002E31F198C7E00E567FC /* ShowCaseItem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A48002E61F19935100E567FC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				A48002E71F19936600E567FC /* AppManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		A48E714A1F16E38D00B31E81 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A48E71481F16E38700B31E81 /* HomeViewController.swift */,
+				A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */,
+				A48002E11F19815A00E567FC /* LocationViewController.swift */,
+				A4093A0E1F27D27B00348D33 /* StackViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A4C7AB3E1F16D75A00499FEB = {
+			isa = PBXGroup;
+			children = (
+				A4C7AB491F16D75A00499FEB /* VirtusApp */,
+				A4C7AB481F16D75A00499FEB /* Products */,
+				81665F4A35CBE7D78289234A /* Pods */,
+				9FEA89233D445AECB8DBAD69 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A4C7AB481F16D75A00499FEB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4C7AB471F16D75A00499FEB /* VirtusApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4C7AB491F16D75A00499FEB /* VirtusApp */ = {
+			isa = PBXGroup;
+			children = (
+				A48002E61F19935100E567FC /* Managers */,
+				A48002E51F198CF600E567FC /* Model */,
+				A48E714A1F16E38D00B31E81 /* ViewControllers */,
+				A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */,
+				A4C7AB501F16D75B00499FEB /* Main.storyboard */,
+				A4C7AB531F16D75B00499FEB /* Assets.xcassets */,
+				A4C7AB551F16D75B00499FEB /* LaunchScreen.storyboard */,
+				A4C7AB581F16D75B00499FEB /* Info.plist */,
+			);
+			path = VirtusApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4C7AB461F16D75A00499FEB /* VirtusApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4C7AB5B1F16D75B00499FEB /* Build configuration list for PBXNativeTarget "VirtusApp" */;
+			buildPhases = (
+				7CB7527A170A4879D604666A /* [CP] Check Pods Manifest.lock */,
+				A4C7AB431F16D75A00499FEB /* Sources */,
+				A4C7AB441F16D75A00499FEB /* Frameworks */,
+				A4C7AB451F16D75A00499FEB /* Resources */,
+				621C5A029546D37CFA50CF02 /* [CP] Embed Pods Frameworks */,
+				9F6A7D78FBE40F6DC61E893C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VirtusApp;
+			productName = VirtusApp;
+			productReference = A4C7AB471F16D75A00499FEB /* VirtusApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4C7AB3F1F16D75A00499FEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Virtus;
+				TargetAttributes = {
+					A4C7AB461F16D75A00499FEB = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = UUQBRT7279;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = A4C7AB421F16D75A00499FEB /* Build configuration list for PBXProject "VirtusApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4C7AB3E1F16D75A00499FEB;
+			productRefGroup = A4C7AB481F16D75A00499FEB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4C7AB461F16D75A00499FEB /* VirtusApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4C7AB451F16D75A00499FEB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4C7AB571F16D75B00499FEB /* LaunchScreen.storyboard in Resources */,
+				A4C7AB541F16D75B00499FEB /* Assets.xcassets in Resources */,
+				A4C7AB521F16D75B00499FEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		621C5A029546D37CFA50CF02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CB7527A170A4879D604666A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9F6A7D78FBE40F6DC61E893C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4C7AB431F16D75A00499FEB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A48002E81F19936600E567FC /* AppManager.swift in Sources */,
+				A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */,
+				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,
+				A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */,
+				A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */,
+				A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */,
+				A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A4C7AB501F16D75B00499FEB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4C7AB511F16D75B00499FEB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A4C7AB551F16D75B00499FEB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4C7AB561F16D75B00499FEB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4C7AB591F16D75B00499FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4C7AB5A1F16D75B00499FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4C7AB5C1F16D75B00499FEB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A84841A4CDAA8A369C2CA7 /* Pods-VirtusApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UUQBRT7279;
+				INFOPLIST_FILE = VirtusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.virtus.tiagoln.VirtusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A4C7AB5D1F16D75B00499FEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A79B6A8B11E070A7C6DA81C /* Pods-VirtusApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = UUQBRT7279;
+				INFOPLIST_FILE = VirtusApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.virtus.tiagoln.VirtusApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4C7AB421F16D75A00499FEB /* Build configuration list for PBXProject "VirtusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4C7AB591F16D75B00499FEB /* Debug */,
+				A4C7AB5A1F16D75B00499FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4C7AB5B1F16D75B00499FEB /* Build configuration list for PBXNativeTarget "VirtusApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4C7AB5C1F16D75B00499FEB /* Debug */,
+				A4C7AB5D1F16D75B00499FEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4C7AB3F1F16D75A00499FEB /* Project object */;
+}
