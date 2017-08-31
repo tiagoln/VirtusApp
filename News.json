@@ -1,28 +1,27 @@
 {
-  “News”: [
-    {
-      "Title": “News 1“,
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur ipsum vel felis porttitor, vel porttitor ante sodales. Maecenas eget enim elit. Aliquam quam erat, pulvinar eget dolor nec, ullamcorper suscipit ex. Sed sed aliquam odio. Maecenas eu nisl eget.",
-      "ImageURL": "https://lh3.ggpht.com/-F-4jHFtoLng/V6nZVn25gdI/AAAAAAAAAbg/3YNT6qvOEMcomXPkjVi6zEy1pd7GgiV1wCJkC/s1536/photo”,
-      “Date”:”2017-08-31 12:00”
-    },
-    {
-      "Title": “News 2”,
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus tellus id interdum lobortis. Donec sed tempus dui. Nunc ac odio nec sapien iaculis egestas eget sit amet ipsum. Suspendisse tempus dolor in vehicula auctor. In sit amet turpis id.",
-      "ImageURL": "https://lh3.ggpht.com/-agsmoxzTW-M/WCDmSHtibEI/AAAAAAAADJo/Bnut-XTqOU46TK4rRmWCvOFX09SX693MQCLIB/s1536/photo”,
-      “Date”:”2017-08-28 12:00”
-    },
-    {
-      "Title": “News 3“,
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
-      "ImageURL": "https://lh3.ggpht.com/-fpQV_O36aSY/WMFj1u2f-1I/AAAAAAAAFYM/EGcuBo73DCQ1BNoBSJAjqFDSarhaHVpTgCLIB/s1536/photo”,
-      “Date”:”2017-08-23 12:00”
-    },
-    {
-      "Title": “News 4”,
-      "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
-      "ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg”,
-      “Date”:”2017-08-20 12:00”
-    }
-  ]
+	"News": [{
+			"Title": "News 1",
+			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur ipsum vel felis porttitor, vel porttitor ante sodales. Maecenas eget enim elit. Aliquam quam erat, pulvinar eget dolor nec, ullamcorper suscipit ex. Sed sed aliquam odio. Maecenas eu nisl eget.",
+			"ImageURL": "https://lh3.ggpht.com/-F-4jHFtoLng/V6nZVn25gdI/AAAAAAAAAbg/3YNT6qvOEMcomXPkjVi6zEy1pd7GgiV1wCJkC/s1536/photo",
+			"Date": "2017 - 08 - 31 12: 00"
+		},
+		{
+			"Title": "News 2",
+			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus tellus id interdum lobortis. Donec sed tempus dui. Nunc ac odio nec sapien iaculis egestas eget sit amet ipsum. Suspendisse tempus dolor in vehicula auctor. In sit amet turpis id.",
+			"ImageURL": "https://lh3.ggpht.com/-agsmoxzTW-M/WCDmSHtibEI/AAAAAAAADJo/Bnut-XTqOU46TK4rRmWCvOFX09SX693MQCLIB/s1536/photo",
+			"Date": "2017 - 08 - 28 12: 00"
+		},
+		{
+			"Title": "News 3",
+			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
+			"ImageURL": "https://lh3.ggpht.com/-fpQV_O36aSY/WMFj1u2f-1I/AAAAAAAAFYM/EGcuBo73DCQ1BNoBSJAjqFDSarhaHVpTgCLIB/s1536/photo",
+			"Date": "2017 - 08 - 23 12: 00"
+		},
+		{
+			"Title": "News 4",
+			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
+			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
+			"Date": "2017 - 08 - 20 12: 00"
+		}
+	]
 }
