@@ -16,7 +16,7 @@ class HomeViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AppManager.sharedInstance.getShowcases({
+        AppManager.sharedInstance.getShowcases {
             for showcase in AppManager.sharedInstance.ShowCaseCollection {
                 self.orderedViewControllers.append(self.newColoredViewController(showcase))
             }
@@ -28,7 +28,7 @@ class HomeViewController: UIPageViewController {
                                         completion: nil)
             }
             
-        })
+        }
         
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.suspendTimer), name:NSNotification.Name.UIApplicationWillResignActive, object: nil)
         

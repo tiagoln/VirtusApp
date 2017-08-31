@@ -12,4 +12,10 @@ struct ShowCaseItem {
     let title: String?
     let description: String?
     let imageURL: String?
+    
+    init(json: [String: Any]) {
+        title = json["Title"] as? String ?? ""
+        description = json["Description"] as? String ?? ""
+        imageURL = json["ImageURL"] as? String ?? ""
+    }
 }

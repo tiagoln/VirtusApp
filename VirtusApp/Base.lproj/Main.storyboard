@@ -23,12 +23,41 @@
                     <connections>
                         <segue destination="0Jk-0d-mKg" kind="relationship" relationship="viewControllers" id="oLk-y1-Psw"/>
                         <segue destination="lLS-vU-Rj1" kind="relationship" relationship="viewControllers" id="5UQ-wr-Vis"/>
-                        <segue destination="hRE-b2-Q3A" kind="relationship" relationship="viewControllers" id="M6S-Kg-WPm"/>
+                        <segue destination="m8V-gz-nMf" kind="relationship" relationship="viewControllers" id="ZJY-cn-uL3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-271" y="-29"/>
+        </scene>
+        <!--Novidades-->
+        <scene sceneID="GQQ-x8-OFo">
+            <objects>
+                <tableViewController id="m8V-gz-nMf" customClass="NewsViewController" customModule="VirtusApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UkR-gc-EYE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsCell" id="pHk-Yb-DGw">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pHk-Yb-DGw" id="nHY-3q-6G3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m8V-gz-nMf" id="KCf-mJ-QT4"/>
+                            <outlet property="delegate" destination="m8V-gz-nMf" id="7HJ-qj-XFa"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Novidades" image="feed" id="Ywa-Gu-4Ab"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZH-aP-6YX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="402"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="5vc-EB-qUO">
@@ -57,12 +86,21 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teste Virtus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dda-ee-99h">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dda-ee-99h">
                                                         <rect key="frame" x="8" y="0.0" width="304" height="57"/>
+                                                        <color key="tintColor" red="0.26060673039999999" green="0.32797695650000003" blue="0.65402918789999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="57" id="VsO-A2-paO"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Teste Virtus">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.26060673040994453" green="0.32797695651448949" blue="0.65402918787563447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" metaFont="system" size="26"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Af0-4d-SWk">
@@ -183,25 +221,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZWG-20-Cbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="812" y="-332"/>
-        </scene>
-        <!--Novidades-->
-        <scene sceneID="elt-D2-NcS">
-            <objects>
-                <viewController title="Novidades" id="hRE-b2-Q3A" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vF3-j9-Zdo"/>
-                        <viewControllerLayoutGuide type="bottom" id="tO6-Dx-2qP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OwF-RE-6bp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Novidades" image="feed" selectedImage="feed" id="2ix-NY-pwg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lOt-lQ-7iJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="812" y="375"/>
         </scene>
     </scenes>
     <resources>
