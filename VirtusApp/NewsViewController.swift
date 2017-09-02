@@ -10,14 +10,21 @@ import UIKit
 
 class NewsViewController: UITableViewController {
 
+    var allNews:Array<NewsItem>! = []
     var news: Array<NewsItem>! = []
+    var lastIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 50, right: 0)
+        self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         
         AppManager.sharedInstance.getNews {
-            self.news = AppManager.sharedInstance.NewsCollection
+            self.allNews = AppManager.sharedInstance.NewsCollection
+            for i in 0 ..< 4 {
+                self.news.append(self.allNews[i])
+            }
+            self.lastIndex = self.news.count - 1
             self.tableView.reloadData()
         }
         // Uncomment the following line to preserve selection between presentations
@@ -25,6 +32,29 @@ class NewsViewController: UITableViewController {
         
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func refresh(sender:AnyObject)
+    {
+        AppManager.sharedInstance.getNews {
+            self.allNews = AppManager.sharedInstance.NewsCollection
+            self.news = []
+            for i in 0 ..< 4 {
+                self.news.append(self.allNews[i])
+            }
+            self.tableView.reloadData()
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        print(lastIndex)
+        if indexPath.row == lastIndex {
+            news.append(contentsOf: allNews[lastIndex...lastIndex + 4])
+            lastIndex += news.count - 1
+            tableView.reloadData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,14 +74,17 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
         let newsItem = news[indexPath.row]
         
-        cell.textLabel?.text = newsItem.title
-        cell.detailTextLabel?.text = newsItem.description
-        cell.detailTextLabel?.numberOfLines = 3
-        cell.imageView?.sd_setImage(with: URL(string: "http://lorempixel.com/200/200/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
-        cell.imageView?.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
+        cell.titleLable.text = newsItem.title
+        cell.newsContent.text = newsItem.description
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        cell.newsDate.text = formatter.string(from: newsItem.date!)
+        
+        cell.newsImage?.sd_setImage(with: URL(string: "http://lorempixel.com/300/110/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
         return cell
     }

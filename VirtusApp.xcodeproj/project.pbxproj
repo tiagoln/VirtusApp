@@ -15,6 +15,7 @@
 		A493B13A1F5851DE00F0E3A4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1391F5851DE00F0E3A4 /* NewsItem.swift */; };
 		A493B13C1F5895D200F0E3A4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */; };
 		A493B13E1F59E92200F0E3A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13D1F59E92200F0E3A4 /* TabViewController.swift */; };
+		A493B1411F5B00EC00F0E3A4 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */; };
 		A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */; };
 		A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */; };
 		A4C7AB521F16D75B00499FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C7AB501F16D75B00499FEB /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		A493B1391F5851DE00F0E3A4 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		A493B13D1F59E92200F0E3A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4C7AB471F16D75A00499FEB /* VirtusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,14 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
+		A493B13F1F5B00AB00F0E3A4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */,
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
 		A4C7AB3E1F16D75A00499FEB = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +134,7 @@
 		A4C7AB491F16D75A00499FEB /* VirtusApp */ = {
 			isa = PBXGroup;
 			children = (
+				A493B13F1F5B00AB00F0E3A4 /* Components */,
 				A48002E61F19935100E567FC /* Managers */,
 				A48002E51F198CF600E567FC /* Model */,
 				A48E714A1F16E38D00B31E81 /* ViewControllers */,
@@ -268,6 +279,7 @@
 				A493B13E1F59E92200F0E3A4 /* TabViewController.swift in Sources */,
 				A48002E81F19936600E567FC /* AppManager.swift in Sources */,
 				A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */,
+				A493B1411F5B00EC00F0E3A4 /* NewsTableViewCell.swift in Sources */,
 				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,
 				A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */,
 				A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */,

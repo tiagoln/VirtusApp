@@ -53,6 +53,7 @@ class AppManager {
                 }
                 let showCaseList = json["News"] as! NSArray
                 
+                self.NewsCollection = []
                 for showCase in showCaseList {
                     let dict = showCase as! [String: Any]
                     self.NewsCollection.append(NewsItem(json: dict))
@@ -63,6 +64,9 @@ class AppManager {
                 }
             } catch let error as NSError {
                 print(error)
+                DispatchQueue.main.async() {
+                    callback();
+                }
             }
         }).resume()
     }
