@@ -14,6 +14,7 @@
 		A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E71481F16E38700B31E81 /* HomeViewController.swift */; };
 		A493B13A1F5851DE00F0E3A4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1391F5851DE00F0E3A4 /* NewsItem.swift */; };
 		A493B13C1F5895D200F0E3A4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */; };
+		A493B13E1F59E92200F0E3A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13D1F59E92200F0E3A4 /* TabViewController.swift */; };
 		A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */; };
 		A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */; };
 		A4C7AB521F16D75B00499FEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C7AB501F16D75B00499FEB /* Main.storyboard */; };
@@ -33,6 +34,7 @@
 		A48E71481F16E38700B31E81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A493B1391F5851DE00F0E3A4 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		A493B13D1F59E92200F0E3A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4C7AB471F16D75A00499FEB /* VirtusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				A48002E11F19815A00E567FC /* LocationViewController.swift */,
 				A4093A0E1F27D27B00348D33 /* StackViewController.swift */,
 				A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */,
+				A493B13D1F59E92200F0E3A4 /* TabViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A493B13E1F59E92200F0E3A4 /* TabViewController.swift in Sources */,
 				A48002E81F19936600E567FC /* AppManager.swift in Sources */,
 				A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */,
 				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,

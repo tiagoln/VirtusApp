@@ -14,6 +14,7 @@ class NewsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         AppManager.sharedInstance.getNews {
             self.news = AppManager.sharedInstance.NewsCollection
@@ -43,11 +44,13 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath)
         let newsItem = news[indexPath.row]
         
-        cell.textLabel?.text = newsItem.description
-        cell.imageView?.sd_setImage(with: URL(string: "http://lorempixel.com/200/200/business/\(indexPath.row)"), placeholderImage: UIImage(named: "car-small-icon.png"))
+        cell.textLabel?.text = newsItem.title
+        cell.detailTextLabel?.text = newsItem.description
+        cell.detailTextLabel?.numberOfLines = 3
+        cell.imageView?.sd_setImage(with: URL(string: "http://lorempixel.com/200/200/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         cell.imageView?.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
         
         return cell

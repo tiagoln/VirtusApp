@@ -51,7 +51,7 @@ class AppManager {
                     else {
                         return
                 }
-                let showCaseList = json["newsURL"] as! NSArray
+                let showCaseList = json["News"] as! NSArray
                 
                 for showCase in showCaseList {
                     let dict = showCase as! [String: Any]

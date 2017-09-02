@@ -27,7 +27,6 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
         annotation.title = "Virtus"
         annotation.subtitle = "Rua Aprígio Veloso, 1500 - Bodocongó"
         mapView.addAnnotation(annotation)
-        mapView.selectAnnotation(annotation, animated: true)
         centerMapOnLocation(location: initialLocation!)
     }
     
@@ -45,8 +44,10 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
             annotationView.isEnabled = true
             annotationView.canShowCallout = true
             
-            let btn = UIButton(type: .detailDisclosure)
+            let btn = UIButton()
+            btn.setImage(UIImage(named: "route"), for: UIControlState.normal)
             btn.tag = 1
+            btn.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
             btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
             annotationView.rightCalloutAccessoryView = btn
             
@@ -79,6 +80,7 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                   regionRadius * 2.0, regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+        mapView.selectAnnotation(annotation, animated: true)
     }
 //
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
