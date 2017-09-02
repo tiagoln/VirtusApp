@@ -25,9 +25,7 @@ class NewsTableViewCell: UITableViewCell {
         newsItemView.layer.shadowOffset = CGSize(width: 1, height: 1)
         newsItemView.layer.shadowRadius = 2;
         newsItemView.layer.shadowOpacity = 0.3;
-        
-        newsImage.contentMode = .scaleAspectFill
-        newsImage.clipsToBounds = true
+                
         titleLable.adjustsFontSizeToFitWidth = false;
         titleLable.lineBreakMode = .byTruncatingTail;
         newsContent.adjustsFontSizeToFitWidth = false;

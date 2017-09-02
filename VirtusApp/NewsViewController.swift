@@ -21,6 +21,7 @@ class NewsViewController: UITableViewController {
         
         AppManager.sharedInstance.getNews {
             self.allNews = AppManager.sharedInstance.NewsCollection
+            self.allNews.sort(by: { $0.date?.compare($1.date!) == .orderedDescending })
             for i in 0 ..< 4 {
                 self.news.append(self.allNews[i])
             }
@@ -42,17 +43,16 @@ class NewsViewController: UITableViewController {
             for i in 0 ..< 4 {
                 self.news.append(self.allNews[i])
             }
+            self.lastIndex = self.news.count - 1
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        print(lastIndex)
-        if indexPath.row == lastIndex {
-            news.append(contentsOf: allNews[lastIndex...lastIndex + 4])
-            lastIndex += news.count - 1
+        if indexPath.row == lastIndex && news.count < allNews.count {
+            news.append(contentsOf: allNews[lastIndex + 1...lastIndex + 4])
+            lastIndex = news.count - 1
             tableView.reloadData()
         }
     }
@@ -84,7 +84,7 @@ class NewsViewController: UITableViewController {
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
         cell.newsDate.text = formatter.string(from: newsItem.date!)
         
-        cell.newsImage?.sd_setImage(with: URL(string: "http://lorempixel.com/300/110/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
+        cell.newsImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
         return cell
     }
