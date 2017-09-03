@@ -16,12 +16,12 @@ class NewsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 50, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         
         AppManager.sharedInstance.getNews {
             self.allNews = AppManager.sharedInstance.NewsCollection
-            self.allNews.sort(by: { $0.date?.compare($1.date!) == .orderedDescending })
+            self.allNews.sort { $0.date! > ($1.date!) }
             for i in 0 ..< 4 {
                 self.news.append(self.allNews[i])
             }
@@ -49,12 +49,30 @@ class NewsViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Hide the navigation bar on the this view controller
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Show the navigation bar on other view controllers
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == lastIndex && news.count < allNews.count {
             news.append(contentsOf: allNews[lastIndex + 1...lastIndex + 4])
             lastIndex = news.count - 1
             tableView.reloadData()
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goToDetail", sender: indexPath)
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,13 +105,6 @@ class NewsViewController: UITableViewController {
         cell.newsImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        var car = listed[indexPath.row]
-//        car.image = cell.imageView!.image
-//        performSegue(withIdentifier: "selectCar", sender: indexPath.row)
     }
     
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
@@ -133,14 +144,12 @@ class NewsViewController: UITableViewController {
      }
      */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? DetailViewController {
+            let indexPath = sender as! IndexPath
+            vc.newsItem = news[indexPath.row]
+            vc.index = indexPath.row
+        }
     }
-    */
 
 }
