@@ -10,47 +10,37 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    var newsItem: NewsItem?
+    var eventItem: EventItem?
     var index: Int?
     
-    @IBOutlet var contentView: UIView!
-    @IBOutlet weak var newsDate: UILabel!
-    @IBOutlet weak var newsPlace: UILabel!
-    @IBOutlet weak var contentNews: UITextView!
-    @IBOutlet weak var newsImage: UIImageView!
-    @IBOutlet weak var dataPanel: UIView!
-    @IBOutlet weak var line: UIView!
-    @IBOutlet weak var newsTitle: UILabel!
+    @IBOutlet weak var eventImage: UIImageView!
+    @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet weak var eventDescription: UITextView!
+    @IBOutlet weak var eventDate: UILabel!
+    @IBOutlet weak var headerLine: UIView!
+    @IBOutlet weak var eventLocal: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        newsDate.text = formatter.string(from: (newsItem?.date!)!)
-        contentNews.text = newsItem?.description
-        newsTitle.text = newsItem?.title
+        eventDate.text = formatter.string(from: (eventItem?.date!)!)
+        eventDescription.text = eventItem?.description
+        eventTitle.text = eventItem?.title
+        eventLocal.text = "Local: " + eventLocal.text!
         
-        dataPanel.layer.cornerRadius = 2
-        dataPanel.layer.masksToBounds = false;
-        dataPanel.layer.shadowOffset = CGSize(width: 1.5, height: 1)
-        dataPanel.layer.shadowRadius = 2;
-        dataPanel.layer.shadowOpacity = 0.3;
+        headerLine.layer.masksToBounds = false;
+        headerLine.layer.shadowOffset = CGSize(width: 0, height: 3)
+        headerLine.layer.shadowOpacity = 0.30;
         
-        line.layer.cornerRadius = 2
-        line.layer.masksToBounds = false;
-        line.layer.shadowOffset = CGSize(width: 0, height: 3)
-        line.layer.shadowOpacity = 0.15;
-//        line.roundCorners([.topLeft, .topRight], radius: 2)
-        
-        newsImage.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(index ?? 0)"), placeholderImage: UIImage(named: "virtus"))
+        eventImage.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(index ?? 0)"), placeholderImage: UIImage(named: "virtus"))
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -62,15 +52,4 @@ class DetailViewController: UIViewController {
     }
     */
 
-}
-
-extension UIView {
-    
-    func roundCorners(_ corners: UIRectCorner, radius: CGFloat) {
-        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        let mask = CAShapeLayer()
-        mask.path = path.cgPath
-        self.layer.mask = mask
-    }
-    
 }

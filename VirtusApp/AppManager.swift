@@ -13,7 +13,7 @@ class AppManager {
     static let sharedInstance = AppManager()
     
     var ShowCaseCollection: [ShowCaseItem] = []
-    var NewsCollection: [NewsItem] = []
+    var NewsCollection: [EventItem] = []
     let showCaseURL = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/ShowCase.json"
     let newsURL = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/News.json"
     
@@ -42,7 +42,7 @@ class AppManager {
         }).resume()
     }
     
-    func getNews(_ callback: @escaping () -> Swift.Void) {
+    func getEvents(_ callback: @escaping () -> Swift.Void) {
         URLSession.shared.dataTask(with:URL(string: newsURL)!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             
@@ -56,7 +56,7 @@ class AppManager {
                 self.NewsCollection = []
                 for showCase in showCaseList {
                     let dict = showCase as! [String: Any]
-                    self.NewsCollection.append(NewsItem(json: dict))
+                    self.NewsCollection.append(EventItem(json: dict))
                 }
                 
                 DispatchQueue.main.async() {

@@ -8,10 +8,10 @@
 
 import UIKit
 
-class NewsViewController: UITableViewController {
+class EventsViewController: UITableViewController {
 
-    var allNews:Array<NewsItem>! = []
-    var news: Array<NewsItem>! = []
+    var allEvents:Array<EventItem>! = []
+    var events: Array<EventItem>! = []
     var lastIndex = 0
     
     override func viewDidLoad() {
@@ -19,14 +19,8 @@ class NewsViewController: UITableViewController {
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         
-        AppManager.sharedInstance.getNews {
-            self.allNews = AppManager.sharedInstance.NewsCollection
-            self.allNews.sort { $0.date! > ($1.date!) }
-            for i in 0 ..< 4 {
-                self.news.append(self.allNews[i])
-            }
-            self.lastIndex = self.news.count - 1
-            self.tableView.reloadData()
+        AppManager.sharedInstance.getEvents {
+            self.refresh(sender: self)
         }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -37,16 +31,21 @@ class NewsViewController: UITableViewController {
     
     func refresh(sender:AnyObject)
     {
-        AppManager.sharedInstance.getNews {
-            self.allNews = AppManager.sharedInstance.NewsCollection
-            self.news = []
+        AppManager.sharedInstance.getEvents {
+            self.allEvents = AppManager.sharedInstance.NewsCollection
+            self.allEvents.sort { $0.date! > ($1.date!) }
+            self.events = []
             for i in 0 ..< 4 {
-                self.news.append(self.allNews[i])
+                self.events.append(self.allEvents[i])
             }
-            self.lastIndex = self.news.count - 1
+            self.lastIndex = self.events.count - 1
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
+    }
+    
+    func scrollTop() {
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,10 +63,13 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == lastIndex && news.count < allNews.count {
-            news.append(contentsOf: allNews[lastIndex + 1...lastIndex + 4])
-            lastIndex = news.count - 1
+        if indexPath.row == lastIndex && events.count < allEvents.count {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+            events.append(contentsOf: allEvents[lastIndex + 1...lastIndex + 4])
+            lastIndex = events.count - 1
             tableView.reloadData()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+
         }
     }
     
@@ -88,26 +90,24 @@ class NewsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return news.count
+        return events.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell", for: indexPath) as! NewsTableViewCell
-        let newsItem = news[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventsTableViewCell
+        let newsItem = events[indexPath.row]
         
-        cell.titleLable.text = newsItem.title
-        cell.newsContent.text = newsItem.description
+        cell.eventTitle.text = newsItem.title
+        cell.eventDescription.text = newsItem.description
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        cell.newsDate.text = formatter.string(from: newsItem.date!)
+        cell.eventDate.text = formatter.string(from: newsItem.date!)
         
-        cell.newsImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
+        cell.eventImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
         return cell
     }
-    
-    @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
     
     /*
      // Override to support conditional editing of the table view.
@@ -147,9 +147,8 @@ class NewsViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailViewController {
             let indexPath = sender as! IndexPath
-            vc.newsItem = news[indexPath.row]
+            vc.eventItem = events[indexPath.row]
             vc.index = indexPath.row
         }
     }
-
 }

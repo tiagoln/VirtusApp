@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct NewsItem {
+struct EventItem {
     let title: String?
     let description: String?
     let imageURL: String?

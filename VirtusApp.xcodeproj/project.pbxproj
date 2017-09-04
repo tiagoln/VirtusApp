@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093A0E1F27D27B00348D33 /* StackViewController.swift */; };
+		A40DF0AF1F5D0E6B00F6EF3D /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */; };
+		A43F803E1F5D03FC005C0038 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F803D1F5D03FC005C0038 /* StartViewController.swift */; };
 		A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E11F19815A00E567FC /* LocationViewController.swift */; };
 		A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E31F198C7E00E567FC /* ShowCaseItem.swift */; };
 		A48002E81F19936600E567FC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E71F19936600E567FC /* AppManager.swift */; };
 		A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E71481F16E38700B31E81 /* HomeViewController.swift */; };
-		A493B13A1F5851DE00F0E3A4 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1391F5851DE00F0E3A4 /* NewsItem.swift */; };
-		A493B13C1F5895D200F0E3A4 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */; };
+		A493B13A1F5851DE00F0E3A4 /* EventItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1391F5851DE00F0E3A4 /* EventItem.swift */; };
+		A493B13C1F5895D200F0E3A4 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13B1F5895D200F0E3A4 /* EventsViewController.swift */; };
 		A493B13E1F59E92200F0E3A4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B13D1F59E92200F0E3A4 /* TabViewController.swift */; };
-		A493B1411F5B00EC00F0E3A4 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */; };
 		A493B1431F5B9EF700F0E3A4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A493B1421F5B9EF700F0E3A4 /* DetailViewController.swift */; };
 		A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */; };
 		A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C7AB4A1F16D75A00499FEB /* AppDelegate.swift */; };
@@ -30,14 +31,15 @@
 		0A79B6A8B11E070A7C6DA81C /* Pods-VirtusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp.release.xcconfig"; sourceTree = "<group>"; };
 		7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4093A0E1F27D27B00348D33 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
+		A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		A43F803D1F5D03FC005C0038 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		A48002E11F19815A00E567FC /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A48002E31F198C7E00E567FC /* ShowCaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseItem.swift; sourceTree = "<group>"; };
 		A48002E71F19936600E567FC /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		A48E71481F16E38700B31E81 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		A493B1391F5851DE00F0E3A4 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
-		A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		A493B1391F5851DE00F0E3A4 /* EventItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventItem.swift; sourceTree = "<group>"; };
+		A493B13B1F5895D200F0E3A4 /* EventsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
 		A493B13D1F59E92200F0E3A4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		A493B1421F5B9EF700F0E3A4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
 		A4C7AB471F16D75A00499FEB /* VirtusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VirtusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,7 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				A48002E31F198C7E00E567FC /* ShowCaseItem.swift */,
-				A493B1391F5851DE00F0E3A4 /* NewsItem.swift */,
+				A493B1391F5851DE00F0E3A4 /* EventItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -101,9 +103,10 @@
 				A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */,
 				A48002E11F19815A00E567FC /* LocationViewController.swift */,
 				A4093A0E1F27D27B00348D33 /* StackViewController.swift */,
-				A493B13B1F5895D200F0E3A4 /* NewsViewController.swift */,
+				A493B13B1F5895D200F0E3A4 /* EventsViewController.swift */,
 				A493B13D1F59E92200F0E3A4 /* TabViewController.swift */,
 				A493B1421F5B9EF700F0E3A4 /* DetailViewController.swift */,
+				A43F803D1F5D03FC005C0038 /* StartViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -111,7 +114,7 @@
 		A493B13F1F5B00AB00F0E3A4 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A493B1401F5B00EC00F0E3A4 /* NewsTableViewCell.swift */,
+				A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -283,12 +286,13 @@
 				A48002E81F19936600E567FC /* AppManager.swift in Sources */,
 				A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */,
 				A493B1431F5B9EF700F0E3A4 /* DetailViewController.swift in Sources */,
-				A493B1411F5B00EC00F0E3A4 /* NewsTableViewCell.swift in Sources */,
 				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,
 				A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */,
 				A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */,
-				A493B13A1F5851DE00F0E3A4 /* NewsItem.swift in Sources */,
-				A493B13C1F5895D200F0E3A4 /* NewsViewController.swift in Sources */,
+				A40DF0AF1F5D0E6B00F6EF3D /* EventsTableViewCell.swift in Sources */,
+				A43F803E1F5D03FC005C0038 /* StartViewController.swift in Sources */,
+				A493B13A1F5851DE00F0E3A4 /* EventItem.swift in Sources */,
+				A493B13C1F5895D200F0E3A4 /* EventsViewController.swift in Sources */,
 				A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */,
 				A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */,
 			);

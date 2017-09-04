@@ -11,6 +11,8 @@ import UIKit
 
 class TabViewController: UITabBarController, UITabBarControllerDelegate {
 
+    var previousIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +34,16 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
             
             vc.centerMapOnLocation(location: vc.initialLocation!)
         }
+
+        if let vcNav = viewController as? UINavigationController {
+            for vc in vcNav.viewControllers {
+                if let news = vc as? EventsViewController {
+                    if(news.isVisible && previousIndex == selectedIndex){
+                        news.scrollTop()
+                    }
+                }
+            }
+        }
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
@@ -39,17 +51,20 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
             return
         }
         
-        
-        if let vc = self.viewControllers![selectedIndex] as? LocationViewController {
-            guard vc.initialLocation != nil else{
-                return
-            }
-            
-            vc.centerMapOnLocation(location: vc.initialLocation!)
-        }
+        previousIndex = selectedIndex
     }
+
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //         print("Navegou")
 //    }
+}
+
+extension UIViewController {
+    public var isVisible: Bool {
+        if isViewLoaded {
+            return view.window != nil
+        }
+        return false
+    }
 }

@@ -16,18 +16,15 @@ class HomeViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AppManager.sharedInstance.getShowcases {
-            for showcase in AppManager.sharedInstance.ShowCaseCollection {
-                self.orderedViewControllers.append(self.newColoredViewController(showcase))
-            }
-            
-            if let firstViewController = self.orderedViewControllers.first {
-                self.setViewControllers([firstViewController],
-                                        direction: .forward,
-                                        animated: true,
-                                        completion: nil)
-            }
-            
+        for showcase in AppManager.sharedInstance.ShowCaseCollection {
+            orderedViewControllers.append(newColoredViewController(showcase))
+        }
+        
+        if let firstViewController = orderedViewControllers.first {
+            setViewControllers([firstViewController],
+                                    direction: .forward,
+                                    animated: true,
+                                    completion: nil)
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.suspendTimer), name:NSNotification.Name.UIApplicationWillResignActive, object: nil)
