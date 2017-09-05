@@ -10,15 +10,18 @@ import Foundation
 
 class AppManager {
     
+    private init() { }
     static let sharedInstance = AppManager()
     
     var ShowCaseCollection: [ShowCaseItem] = []
-    var NewsCollection: [EventItem] = []
-    let showCaseURL = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/ShowCase.json"
-    let newsURL = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/News.json"
+    var EventCollection: [EventItem] = []
+    var JobCollection: [JobItem] = []
+    let showCaseSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/ShowCase.json"
+    let eventsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/News.json"
+    let jobsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/Jobs.json"
     
     func getShowcases(_ callback: @escaping () -> Swift.Void) {
-        URLSession.shared.dataTask(with:URL(string: showCaseURL)!, completionHandler: {(data, response, error) in
+        URLSession.shared.dataTask(with:URL(string: showCaseSource)!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             
             do {
@@ -29,8 +32,7 @@ class AppManager {
                 let showCaseList = json["ShowCases"] as! NSArray
                 
                 for showCase in showCaseList {
-                    let dict = showCase as! [String: Any]
-                    self.ShowCaseCollection.append(ShowCaseItem(json: dict))
+                    self.ShowCaseCollection.append(ShowCaseItem(json: showCase as! [String: Any]))
                 }
 
                 DispatchQueue.main.async() {
@@ -43,7 +45,7 @@ class AppManager {
     }
     
     func getEvents(_ callback: @escaping () -> Swift.Void) {
-        URLSession.shared.dataTask(with:URL(string: newsURL)!, completionHandler: {(data, response, error) in
+        URLSession.shared.dataTask(with:URL(string: eventsSource)!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             
             do {
@@ -51,12 +53,11 @@ class AppManager {
                     else {
                         return
                 }
-                let showCaseList = json["News"] as! NSArray
+                let showCaseList = json["Events"] as! NSArray
                 
-                self.NewsCollection = []
+                self.EventCollection = []
                 for showCase in showCaseList {
-                    let dict = showCase as! [String: Any]
-                    self.NewsCollection.append(EventItem(json: dict))
+                    self.EventCollection.append(EventItem(json: showCase as! [String: Any]))
                 }
                 
                 DispatchQueue.main.async() {
@@ -70,4 +71,33 @@ class AppManager {
             }
         }).resume()
     }
+    
+    func getJobs(_ callback: @escaping () -> Swift.Void) {
+        URLSession.shared.dataTask(with:URL(string: jobsSource)!, completionHandler: {(data, response, error) in
+            guard let data = data, error == nil else { return }
+            
+            do {
+                guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String:AnyObject]
+                    else {
+                        return
+                }
+                let showCaseList = json["Jobs"] as! NSArray
+                
+                self.JobCollection = []
+                for showCase in showCaseList {
+                    self.JobCollection.append(JobItem(json: showCase as! [String: Any]))
+                }
+                
+                DispatchQueue.main.async() {
+                    callback();
+                }
+            } catch let error as NSError {
+                print(error)
+                DispatchQueue.main.async() {
+                    callback();
+                }
+            }
+        }).resume()
+    }
+
 }

@@ -1,5 +1,5 @@
 //
-//  NewsViewController.swift
+//  EventsViewController.swift
 //  VirtusApp
 //
 //  Created by Tiago Leite Da Nóbrega on 31/08/17.
@@ -18,10 +18,9 @@ class EventsViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
         self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
+        self.refreshControl?.beginRefreshingManually()
         
-        AppManager.sharedInstance.getEvents {
-            self.refresh(sender: self)
-        }
+        self.refresh(sender: self)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -32,8 +31,8 @@ class EventsViewController: UITableViewController {
     func refresh(sender:AnyObject)
     {
         AppManager.sharedInstance.getEvents {
-            self.allEvents = AppManager.sharedInstance.NewsCollection
-            self.allEvents.sort { $0.date! > ($1.date!) }
+            self.allEvents = AppManager.sharedInstance.EventCollection
+            self.allEvents.sort() { $0.date! > ($1.date!) }
             self.events = []
             for i in 0 ..< 4 {
                 self.events.append(self.allEvents[i])
@@ -42,10 +41,6 @@ class EventsViewController: UITableViewController {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
         }
-    }
-    
-    func scrollTop() {
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +64,6 @@ class EventsViewController: UITableViewController {
             lastIndex = events.count - 1
             tableView.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
-
         }
     }
     
@@ -95,14 +89,14 @@ class EventsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventsTableViewCell
-        let newsItem = events[indexPath.row]
+        let eventItem = events[indexPath.row]
         
-        cell.eventTitle.text = newsItem.title
-        cell.eventDescription.text = newsItem.description
+        cell.eventTitle.text = eventItem.title
+        cell.eventDescription.text = eventItem.description
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        cell.eventDate.text = formatter.string(from: newsItem.date!)
+        cell.eventDate.text = formatter.string(from: eventItem.date!)
         
         cell.eventImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
@@ -150,5 +144,20 @@ class EventsViewController: UITableViewController {
             vc.eventItem = events[indexPath.row]
             vc.index = indexPath.row
         }
+    }
+}
+
+extension UIRefreshControl {
+    func beginRefreshingManually() {
+        if let scrollView = superview as? UIScrollView {
+            scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y - frame.height), animated: true)
+        }
+        beginRefreshing()
+    }
+}
+
+extension UITableViewController {
+    func scrollTop() {
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
     }
 }

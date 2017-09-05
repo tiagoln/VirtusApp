@@ -28,7 +28,7 @@ class DetailViewController: UIViewController {
         eventDate.text = formatter.string(from: (eventItem?.date!)!)
         eventDescription.text = eventItem?.description
         eventTitle.text = eventItem?.title
-        eventLocal.text = "Local: " + eventLocal.text!
+        eventLocal.text = eventItem?.place
         
         headerLine.layer.masksToBounds = false;
         headerLine.layer.shadowOffset = CGSize(width: 0, height: 3)

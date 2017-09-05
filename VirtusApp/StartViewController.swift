@@ -13,8 +13,10 @@ class StartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         AppManager.sharedInstance.getShowcases {
             self.performSegue(withIdentifier: "goToHome", sender: nil)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
         // Do any additional setup after loading the view.
     }

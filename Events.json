@@ -1,75 +1,87 @@
 {
-	"News": [{
-			"Title": "Never Lose Your Tecnology Again",
+	"Events": [{
+			"Title": "Maximize Every Heart",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas efficitur ipsum vel felis porttitor, vel porttitor ante sodales. Maecenas eget enim elit. Aliquam quam erat, pulvinar eget dolor nec, ullamcorper suscipit ex. Sed sed aliquam odio. Maecenas eu nisl eget.",
 			"ImageURL": "https://lh3.ggpht.com/-F-4jHFtoLng/V6nZVn25gdI/AAAAAAAAAbg/3YNT6qvOEMcomXPkjVi6zEy1pd7GgiV1wCJkC/s1536/photo",
-			"Date": "2017 - 09 - 02 12:30"
+			"Date": "2017 - 09 - 02 12:30",
+			"Place": "Auditório Virtus"
 		},
 		{
-			"Title": "Don't Fall For This Tecnology Scam",
+			"Title": "Circulate To Extraordinary",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus tellus id interdum lobortis. Donec sed tempus dui. Nunc ac odio nec sapien iaculis egestas eget sit amet ipsum. Suspendisse tempus dolor in vehicula auctor. In sit amet turpis id.",
 			"ImageURL": "https://lh3.ggpht.com/-agsmoxzTW-M/WCDmSHtibEI/AAAAAAAADJo/Bnut-XTqOU46TK4rRmWCvOFX09SX693MQCLIB/s1536/photo",
-			"Date": "2017 - 08 - 31 10:53"
+			"Date": "2017 - 08 - 31 10:53",
+			"Place": "Auditório Virtus"
 		},
 		{
-			"Title": "Tecnology Works Only Under These Conditions",
+			"Title": "Do It Best",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "https://lh3.ggpht.com/-fpQV_O36aSY/WMFj1u2f-1I/AAAAAAAAFYM/EGcuBo73DCQ1BNoBSJAjqFDSarhaHVpTgCLIB/s1536/photo",
-			"Date": "2017 - 08 - 30 17:26"
+			"Date": "2017 - 08 - 30 17:26",
+			"Place": "Auditório PaqTc"
 		},
 		{
 			"Title": "There’s Big Money In Tecnology",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 28 15:56"
+			"Date": "2017 - 08 - 28 15:56",
+			"Place": "Auditório Virtus"
 		},
 		{
-			"Title": "Old School Tecnology",
+			"Title": "Drive Every Possibilities",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 28 09:12"
+			"Date": "2017 - 08 - 28 09:12",
+			"Place": "UFCG"
 		},
 		{
 			"Title": "Tecnology Iphone Apps",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 25 11:43"
+			"Date": "2017 - 08 - 25 11:43",
+			"Place": "Auditório Virtus"
 		},
 		{
 			"Title": "How To Start A Business With Tecnology",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 22 16:20"
+			"Date": "2017 - 08 - 22 16:20",
+			"Place": "Auditório PaqTc"
 		},
 		{
-			"Title": "The Quickest & Easiest Way To Tecnology",
+			"Title": "Create The Best Apps",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 20 13:01"
+			"Date": "2017 - 08 - 20 13:01",
+			"Place": "Auditório Virtus"
 		},
 		{
 			"Title": "How To Start Tecnology With Less Than $100",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 10 12:32"
+			"Date": "2017 - 08 - 10 12:32",
+			"Place": "UFCG"
 		},
 		{
 			"Title": "Little Known Ways to Tecnology",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 15 18:10"
+			"Date": "2017 - 08 - 15 18:10",
+			"Place": "UFCG"
 		},
 		{
-			"Title": "Tecnology Expert Interview",
+			"Title": "Tecnology Expert Tips",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 19 20:11"
+			"Date": "2017 - 08 - 19 20:11",
+			"Place": "Auditório Virtus"
 		},
 		{
 			"Title": "5 Easy Ways You Can Turn Tecnology Into Success",
 			"Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique hendrerit massa vitae malesuada. Praesent volutpat finibus nisi, bibendum sagittis leo auctor a. Pellentesque sit amet ante fringilla, cursus ligula non, gravida orci. Sed ex nibh, egestas eu dui sed.",
 			"ImageURL": "http://virtus.ufcg.edu.br/wp-content/uploads/2015/02/virtus_perspective-b.jpg",
-			"Date": "2017 - 08 - 20 13:54"
+			"Date": "2017 - 08 - 20 13:54",
+			"Place": "Auditório PaqTc"
 		}
 	]
 }

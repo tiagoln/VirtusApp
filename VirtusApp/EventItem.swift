@@ -13,11 +13,13 @@ struct EventItem {
     let description: String?
     let imageURL: String?
     let date: Date?
+    let place: String?
     
     init(json: [String: Any]) {
         title = json["Title"] as? String ?? ""
         description = json["Description"] as? String ?? ""
         imageURL = json["ImageURL"] as? String ?? ""
+        place = json["Place"] as? String ?? ""
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Your date format

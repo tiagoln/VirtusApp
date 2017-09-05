@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093A0E1F27D27B00348D33 /* StackViewController.swift */; };
 		A40DF0AF1F5D0E6B00F6EF3D /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */; };
+		A41BE2D91F5E19A900A1985C /* JobTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BE2D81F5E19A900A1985C /* JobTableViewCell.swift */; };
+		A41BE2DB1F5E3B0500A1985C /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BE2DA1F5E3B0500A1985C /* JobsTableViewController.swift */; };
+		A41BE2DD1F5E3BA300A1985C /* JobItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BE2DC1F5E3BA300A1985C /* JobItem.swift */; };
 		A43F803E1F5D03FC005C0038 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F803D1F5D03FC005C0038 /* StartViewController.swift */; };
 		A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E11F19815A00E567FC /* LocationViewController.swift */; };
 		A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E31F198C7E00E567FC /* ShowCaseItem.swift */; };
@@ -30,8 +32,10 @@
 		03A84841A4CDAA8A369C2CA7 /* Pods-VirtusApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp.debug.xcconfig"; sourceTree = "<group>"; };
 		0A79B6A8B11E070A7C6DA81C /* Pods-VirtusApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VirtusApp/Pods-VirtusApp.release.xcconfig"; sourceTree = "<group>"; };
 		7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtusApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4093A0E1F27D27B00348D33 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		A41BE2D81F5E19A900A1985C /* JobTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobTableViewCell.swift; sourceTree = "<group>"; };
+		A41BE2DA1F5E3B0500A1985C /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
+		A41BE2DC1F5E3BA300A1985C /* JobItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobItem.swift; sourceTree = "<group>"; };
 		A43F803D1F5D03FC005C0038 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		A48002E11F19815A00E567FC /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A48002E31F198C7E00E567FC /* ShowCaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseItem.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 			children = (
 				A48002E31F198C7E00E567FC /* ShowCaseItem.swift */,
 				A493B1391F5851DE00F0E3A4 /* EventItem.swift */,
+				A41BE2DC1F5E3BA300A1985C /* JobItem.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -102,11 +107,11 @@
 				A48E71481F16E38700B31E81 /* HomeViewController.swift */,
 				A4C745881F16ECAE00B77F44 /* DescriptionViewController.swift */,
 				A48002E11F19815A00E567FC /* LocationViewController.swift */,
-				A4093A0E1F27D27B00348D33 /* StackViewController.swift */,
 				A493B13B1F5895D200F0E3A4 /* EventsViewController.swift */,
 				A493B13D1F59E92200F0E3A4 /* TabViewController.swift */,
 				A493B1421F5B9EF700F0E3A4 /* DetailViewController.swift */,
 				A43F803D1F5D03FC005C0038 /* StartViewController.swift */,
+				A41BE2DA1F5E3B0500A1985C /* JobsTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				A40DF0AE1F5D0E6B00F6EF3D /* EventsTableViewCell.swift */,
+				A41BE2D81F5E19A900A1985C /* JobTableViewCell.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -287,14 +293,16 @@
 				A4C745891F16ECAE00B77F44 /* DescriptionViewController.swift in Sources */,
 				A493B1431F5B9EF700F0E3A4 /* DetailViewController.swift in Sources */,
 				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,
-				A4093A0F1F27D27B00348D33 /* StackViewController.swift in Sources */,
 				A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */,
 				A40DF0AF1F5D0E6B00F6EF3D /* EventsTableViewCell.swift in Sources */,
+				A41BE2DD1F5E3BA300A1985C /* JobItem.swift in Sources */,
+				A41BE2D91F5E19A900A1985C /* JobTableViewCell.swift in Sources */,
 				A43F803E1F5D03FC005C0038 /* StartViewController.swift in Sources */,
 				A493B13A1F5851DE00F0E3A4 /* EventItem.swift in Sources */,
 				A493B13C1F5895D200F0E3A4 /* EventsViewController.swift in Sources */,
 				A48E71491F16E38700B31E81 /* HomeViewController.swift in Sources */,
 				A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */,
+				A41BE2DB1F5E3B0500A1985C /* JobsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
