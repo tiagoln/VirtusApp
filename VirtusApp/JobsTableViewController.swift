@@ -44,7 +44,7 @@ class JobsTableViewController: UITableViewController {
     }
     
     func scrollTop() {
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -65), animated: true)
     }
 
     override func didReceiveMemoryWarning() {
