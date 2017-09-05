@@ -17,7 +17,7 @@ class AppManager {
     var EventCollection: [EventItem] = []
     var JobCollection: [JobItem] = []
     let showCaseSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/ShowCase.json"
-    let eventsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/News.json"
+    let eventsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/Events.json"
     let jobsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/Jobs.json"
     
     func getShowcases(_ callback: @escaping () -> Swift.Void) {

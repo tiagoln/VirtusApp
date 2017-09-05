@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="2260" y="387.25637181409297"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Jobs Table View Controller-->
         <scene sceneID="M4F-Os-BFs">
             <objects>
-                <tableViewController id="z31-L7-RlI" sceneMemberID="viewController">
+                <tableViewController id="z31-L7-RlI" customClass="JobsTableViewController" customModule="VirtusApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="128" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jpk-mv-3D5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
