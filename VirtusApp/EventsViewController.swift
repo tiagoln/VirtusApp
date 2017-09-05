@@ -43,6 +43,10 @@ class EventsViewController: UITableViewController {
         }
     }
     
+    func scrollTop() {
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -60,7 +64,12 @@ class EventsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == lastIndex && events.count < allEvents.count {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            events.append(contentsOf: allEvents[lastIndex + 1...lastIndex + 4])
+            if lastIndex + 4 < allEvents.count {
+                events.append(contentsOf: allEvents[lastIndex + 1...lastIndex + 4])
+            }
+            else {
+                events.append(contentsOf: allEvents[lastIndex + 1...allEvents.count - 1])
+            }
             lastIndex = events.count - 1
             tableView.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -153,11 +162,5 @@ extension UIRefreshControl {
             scrollView.setContentOffset(CGPoint(x: 0, y: scrollView.contentOffset.y - frame.height), animated: true)
         }
         beginRefreshing()
-    }
-}
-
-extension UITableViewController {
-    func scrollTop() {
-        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
     }
 }

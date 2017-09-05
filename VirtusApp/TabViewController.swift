@@ -37,9 +37,14 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
 
         if let vcNav = viewController as? UINavigationController {
             for vc in vcNav.viewControllers {
-                if let news = vc as? EventsViewController {
-                    if(news.isVisible && previousIndex == selectedIndex){
-                        news.scrollTop()
+                if let eventsView = vc as? EventsViewController {
+                    if(eventsView.isVisible && previousIndex == selectedIndex){
+                        eventsView.scrollTop()
+                    }
+                }
+                if let jobsView = vc as? JobsTableViewController {
+                    if(jobsView.isVisible && previousIndex == selectedIndex){
+                        jobsView.scrollTop()
                     }
                 }
             }

@@ -17,7 +17,7 @@ class HomeViewController: UIPageViewController {
         super.viewDidLoad()
         
         for showcase in AppManager.sharedInstance.ShowCaseCollection {
-            orderedViewControllers.append(newColoredViewController(showcase))
+            orderedViewControllers.append(newPageViewController(showcase))
         }
         
         if let firstViewController = orderedViewControllers.first {
@@ -81,7 +81,7 @@ class HomeViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    private func newColoredViewController(_ showcase: ShowCaseItem) -> UIViewController {
+    private func newPageViewController(_ showcase: ShowCaseItem) -> UIViewController {
         let controller = UIStoryboard(name: "Main", bundle: nil)
             .instantiateViewController(withIdentifier: "DescViewController") as! DescriptionViewController
         

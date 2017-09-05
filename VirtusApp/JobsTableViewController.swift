@@ -42,6 +42,10 @@ class JobsTableViewController: UITableViewController {
             self.refreshControl?.endRefreshing()
         }
     }
+    
+    func scrollTop() {
+        self.tableView.setContentOffset(CGPoint.init(x: 0, y: -20), animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,7 +66,12 @@ class JobsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == lastIndex && jobs.count < allJobs.count {
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            jobs.append(contentsOf: allJobs[lastIndex + 1...lastIndex + 4])
+            if lastIndex + 4 < allJobs.count {
+                jobs.append(contentsOf: allJobs[lastIndex + 1...lastIndex + 4])
+            }
+            else {                
+                jobs.append(contentsOf: allJobs[lastIndex + 1...allJobs.count - 1])
+            }
             lastIndex = jobs.count - 1
             tableView.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
