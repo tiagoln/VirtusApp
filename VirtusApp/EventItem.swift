@@ -16,14 +16,10 @@ struct EventItem {
     let place: String?
     
     init(json: [String: Any]) {
-        title = json["Title"] as? String ?? ""
-        description = json["Description"] as? String ?? ""
+        title = json["Title"] as? String ?? "Sem título"
+        description = json["Description"] as? String ?? "Não há conteúdo"
         imageURL = json["ImageURL"] as? String ?? ""
-        place = json["Place"] as? String ?? ""
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Your date format
-        dateFormatter.timeZone = TimeZone(abbreviation: "GMT-3:00") //Current time zone
-        date = dateFormatter.date(from: json["Date"] as? String ?? "") //according to date format your date string
+        place = json["Place"] as? String ?? "Local não informado"
+        date = Formatter.iso8601.date(from: json["Date"] as? String ?? "")
     }
 }

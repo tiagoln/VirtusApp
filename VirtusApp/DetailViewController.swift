@@ -13,7 +13,6 @@ class DetailViewController: UIViewController {
     var eventItem: EventItem?
     var index: Int?
     
-    @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UITextView!
     @IBOutlet weak var eventDate: UILabel!
@@ -23,9 +22,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        eventDate.text = formatter.string(from: (eventItem?.date!)!)
+        eventDate.text = eventItem?.date?.toString ?? "---"
         eventDescription.text = eventItem?.description
         eventTitle.text = eventItem?.title
         eventLocal.text = eventItem?.place
@@ -34,7 +31,7 @@ class DetailViewController: UIViewController {
         headerLine.layer.shadowOffset = CGSize(width: 0, height: 3)
         headerLine.layer.shadowOpacity = 0.30;
         
-        eventImage.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(index ?? 0)"), placeholderImage: UIImage(named: "virtus"))
+//        eventImage.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(index ?? 0)"), placeholderImage: UIImage(named: "virtus"))
     }
 
     override func didReceiveMemoryWarning() {

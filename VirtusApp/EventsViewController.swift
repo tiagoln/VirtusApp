@@ -9,18 +9,18 @@
 import UIKit
 
 class EventsViewController: UITableViewController {
-
-    var allEvents:Array<EventItem>! = []
-    var events: Array<EventItem>! = []
-    var lastIndex = 0
+    
+    var events: [EventItem]! = []
+    var willLoadMore = true;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        
         self.refreshControl?.addTarget(self, action: #selector(refresh(sender:)), for: .valueChanged)
         self.refreshControl?.beginRefreshingManually()
-        
         self.refresh(sender: self)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -30,16 +30,19 @@ class EventsViewController: UITableViewController {
     
     func refresh(sender:AnyObject)
     {
-        AppManager.sharedInstance.getEvents {
-            self.allEvents = AppManager.sharedInstance.EventCollection
-            self.allEvents.sort() { $0.date! > ($1.date!) }
-            self.events = []
-            for i in 0 ..< 4 {
-                self.events.append(self.allEvents[i])
+        AppManager.sharedInstance.getEvents(from: 0, take: 4) { loadedEvents in
+            guard loadedEvents != nil && (loadedEvents?.count)! > 0 else {
+                self.refreshControl?.endRefreshing()
+                self.willLoadMore = false
+                return
             }
-            self.lastIndex = self.events.count - 1
+            
+            self.willLoadMore = true
+            self.events = []
+            self.events.append(contentsOf: loadedEvents!)
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
+            
         }
     }
     
@@ -49,30 +52,34 @@ class EventsViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Hide the navigation bar on the this view controller
+        // Hide the navigation bar on this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+        self.tableView.tableFooterView = nil
         // Show the navigation bar on other view controllers
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == lastIndex && events.count < allEvents.count {
+        if indexPath.row == events.count - 1 && willLoadMore {
+            self.showBottomSpinner()
             UIApplication.shared.isNetworkActivityIndicatorVisible = true
-            if lastIndex + 4 < allEvents.count {
-                events.append(contentsOf: allEvents[lastIndex + 1...lastIndex + 4])
+            AppManager.sharedInstance.getEvents(from: events.count, take: 4) { loadedEvents in
+                guard loadedEvents != nil && (loadedEvents?.count)! > 0 else {
+                    self.hideBottomSpinner()
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                    self.willLoadMore = false
+                    return
+                }
+                
+                self.events.append(contentsOf: loadedEvents!)
+                self.tableView.reloadData()
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.hideBottomSpinner()
             }
-            else {
-                events.append(contentsOf: allEvents[lastIndex + 1...allEvents.count - 1])
-            }
-            lastIndex = events.count - 1
-            tableView.reloadData()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }
     }
     
@@ -102,10 +109,7 @@ class EventsViewController: UITableViewController {
         
         cell.eventTitle.text = eventItem.title
         cell.eventDescription.text = eventItem.description
-        
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm"
-        cell.eventDate.text = formatter.string(from: eventItem.date!)
+        cell.eventDate.text = eventItem.date?.toString ?? "---"
         
         cell.eventImage?.sd_setImage(with: URL(string: "http://lorempixel.com/500/500/business/\(indexPath.row)"), placeholderImage: UIImage(named: "virtus"))
         
@@ -146,13 +150,30 @@ class EventsViewController: UITableViewController {
      return true
      }
      */
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? DetailViewController {
             let indexPath = sender as! IndexPath
             vc.eventItem = events[indexPath.row]
             vc.index = indexPath.row
         }
+    }
+}
+
+extension UITableViewController {
+    func showBottomSpinner() {
+        if self.tableView.tableFooterView == nil {
+            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+            spinner.startAnimating()
+            spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
+            self.tableView.tableFooterView = spinner
+        } else {
+            self.tableView.tableFooterView?.isHidden = false
+        }
+    }
+
+    func hideBottomSpinner() {
+        self.tableView.tableFooterView?.isHidden = true
     }
 }
 

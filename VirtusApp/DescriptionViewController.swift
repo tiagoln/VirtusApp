@@ -12,12 +12,6 @@ import SDWebImage
 class DescriptionViewController: UIViewController {
     var showCaseItem: ShowCaseItem?
 
-    var animator: UIDynamicAnimator!
-    var gravity: UIGravityBehavior!
-    var snap: UISnapBehavior!
-    var previousTouchPoint: CGPoint!
-    var viewDragging = false
-    var viewPinned = false
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var showcaseText: UITextView!
     @IBOutlet weak var showcaseTitle: UILabel!

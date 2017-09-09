@@ -84,8 +84,5 @@ class LocationViewController: UIViewController, MKMapViewDelegate {
     }
 //
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if let destination = segue.destinationViewController as? SecondViewController, let annotationView = sender as? MKPinAnnotationView {
-//            destination.annotation = annotationView.annotation as? MKPointAnnotation
-//        }
 //    }
 }

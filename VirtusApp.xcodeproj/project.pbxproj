@@ -12,6 +12,7 @@
 		A41BE2DB1F5E3B0500A1985C /* JobsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BE2DA1F5E3B0500A1985C /* JobsTableViewController.swift */; };
 		A41BE2DD1F5E3BA300A1985C /* JobItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41BE2DC1F5E3BA300A1985C /* JobItem.swift */; };
 		A43F803E1F5D03FC005C0038 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43F803D1F5D03FC005C0038 /* StartViewController.swift */; };
+		A46520A01F6415E00036E995 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465209F1F6415E00036E995 /* Utilities.swift */; };
 		A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E11F19815A00E567FC /* LocationViewController.swift */; };
 		A48002E41F198C7E00E567FC /* ShowCaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E31F198C7E00E567FC /* ShowCaseItem.swift */; };
 		A48002E81F19936600E567FC /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48002E71F19936600E567FC /* AppManager.swift */; };
@@ -37,6 +38,7 @@
 		A41BE2DA1F5E3B0500A1985C /* JobsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobsTableViewController.swift; sourceTree = "<group>"; };
 		A41BE2DC1F5E3BA300A1985C /* JobItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JobItem.swift; sourceTree = "<group>"; };
 		A43F803D1F5D03FC005C0038 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		A465209F1F6415E00036E995 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A48002E11F19815A00E567FC /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		A48002E31F198C7E00E567FC /* ShowCaseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCaseItem.swift; sourceTree = "<group>"; };
 		A48002E71F19936600E567FC /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 				7E148F0FD47C7445129FECC2 /* Pods_VirtusApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A465209E1F6415C20036E995 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A465209F1F6415E00036E995 /* Utilities.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A48002E51F198CF600E567FC /* Model */ = {
@@ -146,6 +156,7 @@
 		A4C7AB491F16D75A00499FEB /* VirtusApp */ = {
 			isa = PBXGroup;
 			children = (
+				A465209E1F6415C20036E995 /* Extensions */,
 				A493B13F1F5B00AB00F0E3A4 /* Components */,
 				A48002E61F19935100E567FC /* Managers */,
 				A48002E51F198CF600E567FC /* Model */,
@@ -294,6 +305,7 @@
 				A493B1431F5B9EF700F0E3A4 /* DetailViewController.swift in Sources */,
 				A4C7AB4B1F16D75A00499FEB /* AppDelegate.swift in Sources */,
 				A48002E21F19815A00E567FC /* LocationViewController.swift in Sources */,
+				A46520A01F6415E00036E995 /* Utilities.swift in Sources */,
 				A40DF0AF1F5D0E6B00F6EF3D /* EventsTableViewCell.swift in Sources */,
 				A41BE2DD1F5E3BA300A1985C /* JobItem.swift in Sources */,
 				A41BE2D91F5E19A900A1985C /* JobTableViewCell.swift in Sources */,

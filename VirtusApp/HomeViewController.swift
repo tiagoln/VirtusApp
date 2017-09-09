@@ -160,6 +160,5 @@ extension HomeViewController: UIPageViewControllerDataSource {
         }
         
         return firstViewControllerIndex
-    }
-    
+    }    
 }

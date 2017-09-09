@@ -14,10 +14,8 @@ class AppManager {
     static let sharedInstance = AppManager()
     
     var ShowCaseCollection: [ShowCaseItem] = []
-    var EventCollection: [EventItem] = []
     var JobCollection: [JobItem] = []
     let showCaseSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/ShowCase.json"
-    let eventsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/Events.json"
     let jobsSource = "https://raw.githubusercontent.com/tiagoln/VirtusApp/master/Jobs.json"
     
     func getShowcases(_ callback: @escaping () -> Swift.Void) {
@@ -44,8 +42,8 @@ class AppManager {
         }).resume()
     }
     
-    func getEvents(_ callback: @escaping () -> Swift.Void) {
-        URLSession.shared.dataTask(with:URL(string: eventsSource)!, completionHandler: {(data, response, error) in
+    func getEvents(from: Int, take: Int, _ callback: @escaping (_ loadedEvents: [EventItem]?) -> Swift.Void) {
+        URLSession.shared.dataTask(with:URL(string: "http://localhost:5000/api/events?from=\(from)&take=\(take)")!, completionHandler: {(data, response, error) in
             guard let data = data, error == nil else { return }
             
             do {
@@ -55,18 +53,18 @@ class AppManager {
                 }
                 let showCaseList = json["Events"] as! NSArray
                 
-                self.EventCollection = []
+                var eventCollection: [EventItem] = []
                 for showCase in showCaseList {
-                    self.EventCollection.append(EventItem(json: showCase as! [String: Any]))
+                    eventCollection.append(EventItem(json: showCase as! [String: Any]))
                 }
                 
                 DispatchQueue.main.async() {
-                    callback();
+                    callback(eventCollection);
                 }
             } catch let error as NSError {
                 print(error)
                 DispatchQueue.main.async() {
-                    callback();
+                    callback(nil);
                 }
             }
         }).resume()

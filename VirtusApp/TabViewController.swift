@@ -17,8 +17,6 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
         super.viewDidLoad()
 
         delegate = self as UITabBarControllerDelegate
-        //tabBar.delegate = self as UITabBarController
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,13 +61,4 @@ class TabViewController: UITabBarController, UITabBarControllerDelegate {
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //         print("Navegou")
 //    }
-}
-
-extension UIViewController {
-    public var isVisible: Bool {
-        if isViewLoaded {
-            return view.window != nil
-        }
-        return false
-    }
 }
