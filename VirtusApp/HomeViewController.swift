@@ -147,18 +147,5 @@ extension HomeViewController: UIPageViewControllerDataSource {
         }
         
         return orderedViewControllers[nextIndex]
-    }
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return orderedViewControllers.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        guard let firstViewController = viewControllers?.first,
-            let firstViewControllerIndex = orderedViewControllers.index(of: firstViewController) else {
-                return 0
-        }
-        
-        return firstViewControllerIndex
-    }    
+    }        
 }

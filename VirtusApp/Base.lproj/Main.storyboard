@@ -522,7 +522,7 @@
         <!--Home-->
         <scene sceneID="w5x-rj-g9Z">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Home" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0Jk-0d-mKg" customClass="HomeViewController" customModule="VirtusApp" customModuleProvider="target" sceneMemberID="viewController">
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Home" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="0Jk-0d-mKg" customClass="HomeViewController" customModule="VirtusApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home" id="oBw-jB-edD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
